@@ -2,4 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.logo{width:100px;height:100px;}
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 
+    Main Color
+    #0c8ce9 
+*/
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.style-dash{
+    flex-basis: 100%;
+}
+.style-dash::after{
+    content: "";
+    flex-grow: 1;
+    margin: 0 11px;
+    border-top: 1px dashed #ddd;  
+}
+.style-gradient{
+    background: linear-gradient(90deg,#00fff0,#62ff4d,#00fff0,#62ff4d);
+	-webkit-background-clip: text;
+    color: transparent;
+	background-size: 300% 100%;
+    animation: animateBg 2.5s linear 3;
+	animation-delay:.2s;
+}
+@keyframes animateBg {
+	0% { background-position: 100% 0%; }
+	100% { background-position: 0% 0%; }
+}

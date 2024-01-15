@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'art': "url('./assets/images/art-doodle.png')",
+        // 'art': "url('./assets/images/art-doodle.png')",
+      },
+      fontFamily:{
+        'NanumSquareNeo':['NanumSquareNeo']
       },
     },
   },

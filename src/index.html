@@ -11,14 +11,26 @@
 <body>
     <main class="flex">
         <aside class="w-1/6 border-r">
-            <div class="p-6">
+            <!-- 프로필 -->
+            <div class="p-4">
                 <div class="flex flex-col bg-art bg-cover items-center">
-                    <img src="./assets/images/doodle_logo.png" id="logo" class="logo">
-                    <p class="p-2">타이틀이 들어갑니다.</p>
-                    <p>내용이 들어갑니다.</p>
+                    <img src="./assets/images/doodle_logo.png" class="logo">
+                    <p class="p-1 font-NanumSquareNeo text-sm font-semibold mt-3">Doodle Dev ✨</p>
+                    <p class="font-NanumSquareNeo text-xs">그림쟁이 개발자</p>
                 </div>
             </div>
+            <!-- //프로필 -->
 
+            <!-- 검색 -->
+            <div class="p-4">
+                <div class="flex items-center p-4 bg-slate-200 h-10 rounded-md">
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="ml-1 bg-slate-200 w-full">
+                </div>
+            </div>
+            <!-- //검색 -->
+            <hr>
+            <!--
             <div class="p-6">
                 <div class="flex justify-between">
                     <div>
@@ -37,12 +49,34 @@
                     </div>
                 </div>
             </div>
+            -->
 
-            <!-- button -->
+            <!-- side menu -->
             <div class="p-6">
-                <i class="bi bi-arrow-right-circle-fill"></i>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#;" class="flex pb-5 font-NanumSquareNeo font-bold	text-base style-gradient">ROOT <span>3</span></a>
+                            <p class="flex items-center pb-5 text-slate-400	style-dash font-NanumSquareNeo text-xs">Programming</p><!-- HTML 편집 확인 -->
+                            <ul class="flex flex-col gap-y-3">
+                                <li class="p-2 hover:rounded-lg hover:bg-slate-100">
+                                    <a  href="#;" class="flex items-center font-NanumSquareNeo text-slate-600 text-sm">
+                                        <span class="flex items-center justify-center mr-4 bg-slate-200 rounded-full w-8 h-8"><i class="bi bi-brilliance"></i></span>Javascript 
+                                        <span class="ml-3">1111</span>
+                                    </a>
+                                </li>
+                                <li class="p-2 hover:rounded-lg hover:bg-slate-100">
+                                    <a  href="#;" class="flex items-center font-NanumSquareNeo text-slate-600 text-sm">
+                                        <span class="flex items-center justify-center mr-4 bg-slate-200 rounded-full w-8 h-8"><i class="bi bi-command"></i></span>Git 
+                                        <span class="ml-3">24</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- //button -->
+            <!-- //side menu -->
         </aside>
 
         <!-- visual -->
@@ -51,5 +85,8 @@
         </section>
         <!-- //visual -->
     </main>
+
+    <!-- Script -->
+    <script src="./index.js"></script>
 </body>
 </html>
