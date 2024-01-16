@@ -568,6 +568,10 @@ video {
   left: 50%;
 }
 
+.left-3 {
+  left: 0.75rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -578,18 +582,6 @@ video {
 
 .top-1\/2 {
   top: 50%;
-}
-
-.left-1 {
-  left: 0.25rem;
-}
-
-.top-1 {
-  top: 0.25rem;
-}
-
-.left-3 {
-  left: 0.75rem;
 }
 
 .top-3 {
@@ -623,6 +615,10 @@ video {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -708,25 +704,16 @@ video {
   word-break: break-all;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
-.rounded-s-xl {
-  border-start-start-radius: 0.75rem;
-  border-end-start-radius: 0.75rem;
 }
 
 .rounded-tl-3xl {
@@ -741,10 +728,6 @@ video {
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-r {
   border-right-width: 1px;
 }
@@ -753,39 +736,24 @@ video {
   border-style: solid;
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
 .border-sky-300 {
   --tw-border-opacity: 1;
   border-color: rgb(125 211 252 / var(--tw-border-opacity));
 }
 
-.border-sky-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(14 165 233 / var(--tw-border-opacity));
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.border-slate-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(71 85 105 / var(--tw-border-opacity));
-}
-
-.border-gray-50 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 250 251 / var(--tw-border-opacity));
-}
-
-.border-gray-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+.bg-cyan-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200 {
@@ -798,14 +766,8 @@ video {
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
-.bg-cyan-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
+.bg-\[url\(\'\.\/assets\/images\/visual_bg\.jpg\'\)\] {
+  background-image: url('./assets/images/visual_bg.jpg');
 }
 
 .bg-\[url\(\'\.\/assets\/images\/visual_bg\.png\'\)\] {
@@ -814,6 +776,10 @@ video {
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
 
 .bg-center {
@@ -866,28 +832,8 @@ video {
   padding-left: 1rem;
 }
 
-.pl-20 {
-  padding-left: 5rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pl-7 {
-  padding-left: 1.75rem;
-}
-
 .pl-5 {
   padding-left: 1.25rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
 }
 
 .pr-5 {
@@ -947,10 +893,6 @@ video {
   font-weight: 600;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .leading-7 {
   line-height: 1.75rem;
 }
@@ -962,6 +904,11 @@ video {
 .text-sky-500 {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.text-sky-700 {
+  --tw-text-opacity: 1;
+  color: rgb(3 105 161 / var(--tw-text-opacity));
 }
 
 .text-slate-400 {
@@ -979,9 +926,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-sky-700 {
-  --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .opacity-50 {
@@ -1141,6 +1087,33 @@ video {
   top: 1.75rem
 }
 
+/* 리스트 카드 애니메이션 */
+
+.style-card-shadow{
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.style-card-shadow:before{
+  content: '';
+  position: absolute;
+  width: 90%;
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  background: radial-gradient(
+		center, ellipse,
+		rgba(0,0,0,0.30) 0%,
+		rgba(0,0,0,0) 80%);
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+
+.style-card-shadow:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 .empty\:my-10:empty {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -1166,8 +1139,8 @@ video {
     margin-bottom: 5rem;
   }
 
-  .lg\:w-\[80rem\] {
-    width: 80rem;
+  .lg\:w-\[70rem\] {
+    width: 70rem;
   }
 
   .lg\:px-0 {
