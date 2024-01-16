@@ -16,6 +16,7 @@
     width: 100px;
     height: 100px;
 }
+/* 글자 오른쪽 ---- 대시 만들기 */
 .style-dash{
     flex-basis: 100%;
 }
@@ -25,15 +26,44 @@
     margin: 0 11px;
     border-top: 1px dashed #ddd;  
 }
+/* //글자 오른쪽 ---- 대시 만들기 */
+
+/* 글자 그라데이션 색상 추가 */
 .style-gradient{
     background: linear-gradient(90deg,#00fff0,#62ff4d,#00fff0,#62ff4d);
 	-webkit-background-clip: text;
     color: transparent;
 	background-size: 300% 100%;
-    animation: animateBg 2.5s linear 3;
+    animation: animateBg 2.5s linear infinite;
 	animation-delay:.2s;
 }
 @keyframes animateBg {
 	0% { background-position: 100% 0%; }
 	100% { background-position: 0% 0%; }
 }
+/* //글자 그라데이션 색상 추가 */
+
+/* 하단 메뉴 라인 애니메이션 */
+.style-underline {
+    position: relative;
+    overflow: hidden;
+}
+.style-underline::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #0c8ce9;
+    transform: translate3d(-100%, 0, 0);
+    content: '';
+}
+.style-underline:hover::after {
+    animation: underline-bottom 1s ease;
+}
+@keyframes underline-bottom {
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+/* //하단 메뉴 라인 애니메이션 */

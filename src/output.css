@@ -616,10 +616,6 @@ video {
   border-radius: 0.375rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .border-r {
   border-right-width: 1px;
 }
@@ -627,16 +623,6 @@ video {
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
 .bg-cover {
@@ -647,24 +633,16 @@ video {
   padding: 0.25rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
 
 .p-6 {
   padding: 1.5rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .pb-5 {
@@ -736,6 +714,8 @@ video {
   height: 100px;
 }
 
+/* 글자 오른쪽 ---- 대시 만들기 */
+
 .style-dash{
   flex-basis: 100%;
 }
@@ -747,12 +727,16 @@ video {
   border-top: 1px dashed #ddd;
 }
 
+/* //글자 오른쪽 ---- 대시 만들기 */
+
+/* 글자 그라데이션 색상 추가 */
+
 .style-gradient{
   background: linear-gradient(90deg,#00fff0,#62ff4d,#00fff0,#62ff4d);
   -webkit-background-clip: text;
   color: transparent;
   background-size: 300% 100%;
-  animation: animateBg 2.5s linear 3;
+  animation: animateBg 2.5s linear infinite;
   animation-delay:.2s;
 }
 
@@ -766,6 +750,38 @@ video {
   }
 }
 
+/* //글자 그라데이션 색상 추가 */
+
+/* 하단 메뉴 라인 애니메이션 */
+
+.style-underline {
+  position: relative;
+  overflow: hidden;
+}
+
+.style-underline::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-color: #0c8ce9;
+  transform: translate3d(-100%, 0, 0);
+  content: '';
+}
+
+.style-underline:hover::after {
+  animation: underline-bottom 1s ease;
+}
+
+@keyframes underline-bottom {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+/* //하단 메뉴 라인 애니메이션 */
+
 .hover\:rounded-lg:hover {
   border-radius: 0.5rem;
 }
@@ -773,9 +789,4 @@ video {
 .hover\:bg-slate-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
-.hover\:text-slate-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(71 85 105 / var(--tw-text-opacity));
 }
