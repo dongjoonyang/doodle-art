@@ -15,7 +15,37 @@
 </head>
 <body>
     <div class="pl-0 break-all xl:pl-64">
-        <main class="">
+        <main class="relative">
+            <!-- header -->
+            <header id="header" class="w-full absolute top-5 left-0 right-0 z-10">
+                <nav class="relative flex items-center w-5/6 m-auto h-[65px] rounded-xl">
+                    <ul class="h-full flex">
+                        <li class="flex h-full">
+                            <a href="#;" class="flex items-center h-full pr-10 pl-10 text-sm text-neutral-500 font-NanumSquareNeo">
+                                Programming<i class="bi bi-caret-down-fill pl-4 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 -bottom-[24px] hidden bg-gray-50 w-full">
+                                <a href="#;">Left</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#;" class="absolute left-2/4 w-[32px] h-[32px] bg-gray-100 border -translate-x-1/2 rounded-full"></a>
+
+                    <ul class="h-full flex ml-auto">
+                        <li class="flex h-full">
+                            <a href="#;" class="flex items-center h-full pr-10 pl-10 text-sm text-neutral-500 font-NanumSquareNeo">
+                                Page<i class="bi bi-caret-down-fill pl-4 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 -bottom-[24px] hidden bg-gray-50 w-full">
+                                <a href="#;">right</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- //header-->
+
             <!-- visual -->
             <section class="">
                 <main class="pb-14 relative">
@@ -181,16 +211,22 @@
                             <a href="#;" class="flex pb-5 font-NanumSquareNeo font-bold	text-base style-gradient">ROOT <span class="ml-1">(3)</span></a>
                             <p class="flex items-center pb-5 text-slate-400	font-NanumSquareNeo text-xs style-dash">Programming</p><!-- HTML 편집 확인 -->
                             <ul class="flex flex-col gap-y-3">
-                                <li class="hover:rounded-lg hover:bg-slate-100 style-underline">
-                                    <a  href="#;" class="flex items-center font-NanumSquareNeo text-slate-600 p-2 text-sm">
-                                        <span class="flex items-center justify-center mr-4 bg-slate-200 rounded-full w-8 h-8"><i class="bi bi-brilliance"></i></span>Javascript 
+                                <li class="hover:rounded-lg style-underline">
+                                    <a  href="#;" class="flex items-center font-NanumSquareNeo p-2 text-sm hover:text-sky-600 group">
+                                        <span class="flex items-center justify-center mr-4 border rounded-lg w-8 h-8 text-sky-400 group-hover:text-sky-600 group-hover:shadow-md">
+                                            <i class="bi bi-brilliance"></i>
+                                        </span>
+                                        <span>Javascript</span>
                                         <span class="ml-3 text-[10px] p-1 rounded-full border border-1 border-sky-300 text-sky-500 leading-none">1111</span>
                                         <span class="ml-auto"><i class="bi bi-chevron-right text-[10px]"></i></span><!-- bi-chevron-down -->
                                     </a>
                                 </li>
-                                <li class="hover:rounded-lg hover:bg-slate-100 style-underline">
-                                    <a  href="#;" class="flex items-center font-NanumSquareNeo text-slate-600 p-2 text-sm">
-                                        <span class="flex items-center justify-center mr-4 bg-slate-200 rounded-full w-8 h-8"><i class="bi bi-command"></i></span>Git 
+                                <li class="hover:rounded-lg style-underline">
+                                    <a  href="#;" class="flex items-center font-NanumSquareNeo p-2 text-sm hover:text-sky-600 group">
+                                        <span class="flex items-center justify-center mr-4 border rounded-lg w-8 h-8 text-sky-400 group-hover:text-sky-600 group-hover:shadow-md">
+                                            <i class="bi bi-command"></i>
+                                        </span>
+                                        <span>Git</span>
                                         <span class="ml-3 text-[10px] p-1 rounded-full border border-1 border-sky-300 text-sky-500 leading-none">24</span>
                                         <span class="ml-auto"><i class="bi bi-chevron-right text-[10px]"></i></span><!-- bi-chevron-down -->
                                     </a>
