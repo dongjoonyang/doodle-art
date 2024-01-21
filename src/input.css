@@ -153,8 +153,6 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);   
 }
 
-/* css -> tailwind */
-/* 
-.section01.show + #header nav {background: #fff;}
-.section01.show + #header {position: fixed;top: 10px;} 
-*/
+/* 스크롤 시 메인 메뉴 노출 */
+#mainVisual.style-show + #header nav { background-color: rgba(255,255,255,0.8);box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.2);backdrop-filter: blur(10px); width: 83.333333%;}
+#mainVisual.style-show + #header {position: fixed;top: 10px;width: calc(100% - 16rem);margin-left: auto;}
