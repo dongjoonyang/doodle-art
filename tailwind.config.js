@@ -7,7 +7,8 @@ module.exports = {
         'art': "url('./assets/images/visual_bg.png')",
       },
       fontFamily:{
-        'NanumSquareNeo':['NanumSquareNeo']
+        'NanumSquareNeo':['NanumSquareNeo'],
+        'NanumPen':['NanumPen'],
       },
     },
   },
