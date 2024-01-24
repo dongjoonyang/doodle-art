@@ -161,5 +161,15 @@
 }
 
 /* 스크롤 시 메인 메뉴 노출 */
-#mainVisual.style-show + #header nav { background-color: rgba(255,255,255,0.8);box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.2);backdrop-filter: blur(10px); width: 83.333333%;}
-#mainVisual.style-show + #header {position: fixed;top: 10px;width: calc(100% - 16rem);margin-left: auto;}
+#mainVisual.style-show + #header nav{ background-color: rgba(255,255,255,0.8);box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.2);backdrop-filter: blur(10px); width: 83.333333%;}
+#mainVisual.style-show + #header{position: fixed;top: 10px;width: calc(100% - 16rem);margin-left: auto;}
+
+/* 메인 아이콘 hover시 회전 */
+.style-repeat i{opacity: 0.3;}
+.style-repeat:hover i{opacity: 1;}
+.style-repeat:hover i::before{animation: rotate_image 2s linear infinite;transform-origin: 50% 50%;}
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(360deg);
+    }
+}
