@@ -78,17 +78,17 @@
 
                     <!-- 명언 및 젠체 방문자 수  -->
                     <div class="flex items-center px-4 lg:px-0 lg:w-[70rem] mx-auto mt-10 gap-x-6 ">
-                        <div id="wiseSaying" class="h-[240px] p-8 rounded-xl shadow-2xl border-amber-300 border">
-                            <div class="flex w-full h-full ">
+                        <div class="h-[240px] p-8 rounded-xl shadow-2xl border-amber-300 border">
+                            <div class="flex w-full h-full">
                                 <div class="flex flex-col w-4/6">
-                                    <p class="font-NanumPen text-3xl">다른 사람을 설득하는 가장 좋은 도구는 우리의 귀, 즉 상대의 말에 먼저 귀를 기울이는 것이다.</p>
+                                    <p id="wiseSaying" class="font-NanumSquareNeo text-2xl"></p>
                                     <div class="mt-auto">
-                                        <p class="text-base mb-[10px] font-NanumSquareNeo font-extrabold"><span class="text-emerald-400 mr-1">_</span>미켈란젤로</p>
-                                        <p class="text-xs font-NanumSquareNeo text-gray-500">동아시아 인문주의의 원형이 된 고대 중국의 사상가</p>
+                                        <p class="text-3xl mb-[10px] font-NanumPen"><span class="text-emerald-400 mr-1">_</span><span id="wiseSayingHuman"></span></p>
+                                        <p id="wiseSayingHumanInfo" class="text-xs font-NanumSquareNeo text-gray-500"></p>
                                     </div>
                                 </div>
                                 <div class="flex flex-col w-2/6">
-                                    <button type="button" class="ml-auto style-repeat"><i class="bi bi-arrow-repeat text-4xl "></i></button>
+                                    <button id="refreshBtn" type="button" class="ml-auto style-repeat"><i class="bi bi-arrow-repeat text-4xl"></i></button>
                                     <div class="mt-auto">progress bar</div>
                                 </div>
                             </div>
