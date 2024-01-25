@@ -64,23 +64,32 @@ const wiseSayingObj = [
     }
 ]
 
-const fnWiseSaying = (wiseSayingObj) => {
+let fnWiseSaying = (wiseSayingObj, ranNum) => {
     const wiseSayingEle = document.querySelector("#wiseSaying");
     const wiseSayingHumanEle = document.querySelector("#wiseSayingHuman");
     const wiseSayingHumanInfoEle = document.querySelector("#wiseSayingHumanInfo");
 
-    const wishSayingObjRandom = wiseSayingObj[Math.floor(Math.random() * wiseSayingObj.length)];
-    
-    wiseSayingEle.innerHTML = wishSayingObjRandom.saying;
-    wiseSayingHumanEle.innerHTML = wishSayingObjRandom.human;
-    wiseSayingHumanInfoEle.innerHTML = wishSayingObjRandom.info;
+    wiseSayingEle.innerHTML = wiseSayingObj[ranNum].saying;
+    wiseSayingHumanEle.innerHTML = wiseSayingObj[ranNum].human;
+    wiseSayingHumanInfoEle.innerHTML = wiseSayingObj[ranNum].info;
 }
 
-fnWiseSaying(wiseSayingObj);
+// localStorage.clear();
+let strogeRanNum = Math.floor(Math.random() * wiseSayingObj.length);
+let ranNum = Math.floor(Math.random() * wiseSayingObj.length);
+localStorage.setItem("localNumber", strogeRanNum);
 
-(() => {
-    const refreshBtn = document.querySelector("#refreshBtn");
-    refreshBtn.addEventListener('click', () => {
-        fnWiseSaying(wiseSayingObj);
-    })
-})();
+if(parseInt(localStorage.getItem("localNumber")) === parseInt(ranNum)){
+    let newRanNum = Math.floor(Math.random() * wiseSayingObj.length);
+    fnWiseSaying(wiseSayingObj, newRanNum);
+} else {
+    fnWiseSaying(wiseSayingObj, parseInt(localStorage.getItem("localNumber")));
+}
+
+// (() => {
+//     const refreshBtn = document.querySelector("#refreshBtn");
+//     refreshBtn.addEventListener('click', () => {
+//         fnWiseSaying(wiseSayingObj);
+//     })
+// })();
+//const ranNum = wiseSayingObj[Math.floor(Math.random() * wiseSayingObj.length)];
