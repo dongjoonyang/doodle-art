@@ -43,67 +43,57 @@
 /* 명언 입력 */
 const wiseSayingObj = [
     {
-        saying: '스스로를 존경하면 다른 사람도 당신을 존경할 것이다.',
+        saying: '1',
         human: '공자',
         info: '동아시아 인문주의의 원형이 된 고대 중국의 사상가'
     },
     {
-        saying: '인간은 오직 사고(思考)의 산물일 뿐이다. 생각하는 대로 되는 법.',
+        saying: '2',
         human: '마하트마 간디',
         info: '인도의 정신적·정치적 지도자'
     },
     {
-        saying: '능력이 부족할 수록 자만심이 더 강하다.',
+        saying: '3',
         human: '아하드 하암',
         info: '잠이 오는구만'
     },
     {
-        saying: '여가시간을 가지려면 시간을 잘 써라.',
+        saying: '4',
         human: '벤자민 프랭클린',
         info: '미국의 정치인, 과학자, 저술가.'
     }
 ]
 
+let wiseSayingObjClone = [];
+Object.assign(wiseSayingObjClone, wiseSayingObj);
+
 const wiseSayingEle = document.querySelector("#wiseSaying");
 const wiseSayingHumanEle = document.querySelector("#wiseSayingHuman");
 const wiseSayingHumanInfoEle = document.querySelector("#wiseSayingHumanInfo");
 
-let ranNum = Math.floor(Math.random() * wiseSayingObj.length);
+let num = 0;
+wiseSayingEle.innerHTML = wiseSayingObjClone[num].saying;
+wiseSayingHumanEle.innerHTML = wiseSayingObjClone[num].human;
+wiseSayingHumanInfoEle.innerHTML = wiseSayingObjClone[num].info;
 
-wiseSayingEle.innerHTML = wiseSayingObj[ranNum].saying;
-wiseSayingHumanEle.innerHTML = wiseSayingObj[ranNum].human;
-wiseSayingHumanInfoEle.innerHTML = wiseSayingObj[ranNum].info;
+wiseSayingObjClone.splice(num, 1);
 
-// 배열 복사 확인
-// const wiseSayingEle = document.querySelector("#wiseSaying");
-// const wiseSayingHumanEle = document.querySelector("#wiseSayingHuman");
-// const wiseSayingHumanInfoEle = document.querySelector("#wiseSayingHumanInfo");
-// let tries = [];
+refreshBtn.addEventListener("click", function(){
+    let num = 0;
 
-// for(let n = 0; n < wiseSayingObj.length; n++){
-//     tries.push(n);
-// }
-// console.log(`시작 : ${tries.length}`);
-// let ranNum = Math.floor(Math.random() * tries.length);
+    if(wiseSayingObjClone.length < 1){
+        num = 0;
+        Object.assign(wiseSayingObjClone, wiseSayingObj);
+    }
+    
+    wiseSayingEle.innerHTML = wiseSayingObjClone[num].saying;
+    wiseSayingHumanEle.innerHTML = wiseSayingObjClone[num].human;
+    wiseSayingHumanInfoEle.innerHTML = wiseSayingObjClone[num].info;
 
-// wiseSayingEle.innerHTML = wiseSayingObj[ranNum].saying;
-// wiseSayingHumanEle.innerHTML = wiseSayingObj[ranNum].human;
-// wiseSayingHumanInfoEle.innerHTML = wiseSayingObj[ranNum].info;
+    wiseSayingObjClone.splice(num, 1);
+    console.dir(`${JSON.stringify(wiseSayingObjClone, null, 2)}`);
+    console.log(`${wiseSayingObjClone.length}`);
 
-// tries.splice(ranNum, 1);
-// console.log(`끝 : ${tries.length}`);
+    num += 1;
+});
 
-// refreshBtn.addEventListener("click", function(){
-//     console.log(`함수시작 : ${tries.length}`);
-//     let ranNum = Math.floor(Math.random() * tries.length);
-//     tries.splice(ranNum, 1);
-//     console.log(`함수끝 : ${tries.length}`);
-
-//     wiseSayingEle.innerHTML = wiseSayingObj[ranNum].saying;
-//     wiseSayingHumanEle.innerHTML = wiseSayingObj[ranNum].human;
-//     wiseSayingHumanInfoEle.innerHTML = wiseSayingObj[ranNum].info;
-
-//     if(tries.length < 1){
-//         console.log('초기화')
-//     }
-// });
