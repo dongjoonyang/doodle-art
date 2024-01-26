@@ -885,6 +885,10 @@ video {
   background-image: url('./assets/images/visual_bg.png');
 }
 
+.bg-\[url\(\'\.\/src\/assets\/images\/visual_bg\.jpg\'\)\] {
+  background-image: url('./src/assets/images/visual_bg.jpg');
+}
+
 .bg-contain {
   background-size: contain;
 }
