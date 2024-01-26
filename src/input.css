@@ -173,3 +173,102 @@
     	transform: rotate(360deg);
     }
 }
+
+/* 프로그레스 커스텀 */
+progress[value] {
+    --w: 165px; /* the width*/
+    --color:  /* the progress color */
+      linear-gradient(90deg,#ff6161,#1ecd1e) 0/var(--w);
+    --background: lightgrey; /* the background color */
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: var(--w);
+    margin: 0 10px;
+    border-radius: 10em;
+    background: var(--background);
+}
+progress[value]::-webkit-progress-bar {
+    border-radius: 10em;
+    background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: var(--color);
+}
+progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: var(--color);
+}
+
+/* 명언 영역 선 애니메이션 */
+/* 하단 메뉴 라인 애니메이션 */
+.style-path {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.style-path-top::before {
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #14b814;
+    transform: translate3d(100%, 0, 0);
+    animation: underline-top 3s ease infinite;
+    content: '';
+}
+.style-path-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #0c8ce9;
+    transform: translate3d(0, 100%, 0);
+    animation: underline-right 3s ease infinite;
+}
+.style-path-bottom::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #FF3232;
+    transform: translate3d(-100%, 0, 0);
+    animation: underline-bottom 3s ease infinite;
+    content: '';
+}
+.style-path-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #A814E7;
+    transform: translate3d(0, -100%, 0);
+    animation: underline-left 3s ease infinite;
+}
+@keyframes underline-top {
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+@keyframes underline-right {
+    to {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+@keyframes underline-bottom {
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+@keyframes underline-left {
+    to {
+        transform: translate3d(0, 100%, 0);
+    }
+}
