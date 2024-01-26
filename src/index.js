@@ -97,3 +97,18 @@ refreshBtn.addEventListener("click", function(){
     num += 1;
 });
 
+let fnInterval = () => {
+    let progressBar = document.querySelector("#progressbar");
+    progressBar.value = progressBar.value + 1;
+    
+    if(progressBar.value === 100){
+        progressBar.value = 0;
+    }
+}
+
+let interval = setInterval(fnInterval, 50);
+
+let timerId = setTimeout(function refreshTrigger() {
+    refreshBtn.click();
+    timerId = setTimeout(refreshTrigger, 5000);
+  }, 5000);
