@@ -55,16 +55,18 @@
     position: relative;
     overflow: hidden;
 }
+
 .style-underline::after {
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
     height: 1px;
-    background-color: #0c8ce9;
+    background-color: #282a2c;
     transform: translate3d(-100%, 0, 0);
     content: '';
 }
+.style-underline:hover{background-color: #f1f8ff;}
 .style-underline:hover::after {
     animation: underline-bottom 1s ease;
 }

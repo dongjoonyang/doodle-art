@@ -1,5 +1,5 @@
 /* git config --global core.autocrlf true */
-/* npx tailwindcss -i ./input.css -o ./output.css --watch */ 
+/* sudo npx tailwindcss -i ./input.css -o ./output.css --watch */ 
 
 /* 메뉴 드롭 다운 */
 (() => {
