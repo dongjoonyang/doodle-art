@@ -311,26 +311,30 @@
     <div>
         <!-- 객체 테스트 -->
         <ul id="object">
-            <li>s1</li>
-            <li>s2</li>
+            <li>s1<span class="test">>>>>123</span></li>
+            <li>s2<span class="test">>>>>123</span></li>
         </ul>
     </div>
     <script>
         const obj = document.querySelectorAll(".sidebar-element ul li ul li a");
-        function CreatSpan(tag) {
+        function CreatSpan(type, position, tag) {
             this.span = function(){
                 const span = document.createElement("span");
-                span.classList.add("flex", "items-center", "justify-center", "mr-4", "border", "rounded-lg", "w-8", "h-8", "text-sky-400", "group-hover:text-sky-600", "group-hover:shadow-md");
-                span.insertAdjacentHTML("afterbegin", tag);
+                if(type === "icon"){
+                  span.classList.add("flex", "items-center", "justify-center", "mr-4", "border", "rounded-lg", "w-8", "h-8", "text-sky-400", "group-hover:text-sky-600", "group-hover:shadow-md");
+                } else if(type === "arrow") {
+                  span.classList.add("ml-auto");
+                }
+                span.insertAdjacentHTML(position, tag);
                 return span;
             }
         }
 
-        const span01 = new CreatSpan(`<i class="bi bi-brilliance"></i>`);
-        const span02 = new CreatSpan(`<i class="bi bi-command"></i>`);
+        const icoJs = new CreatSpan("icon", "afterbegin", `<i class="bi bi-brilliance"></i>`);
+        const icoGit = new CreatSpan("icon", "afterbegin", `<i class="bi bi-command"></i>`);
 
-        obj[0].prepend(span01.span());
-        obj[1].prepend(span02.span());
+        obj[0].prepend(icoJs.span());
+        obj[1].prepend(icoGit.span());
     </script>
 
     <!-- Script -->
